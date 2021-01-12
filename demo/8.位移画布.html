@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvasDemo">
+      若浏览器显示此行文本，则该浏览器不支持canvas。
+   </canvas>
+</body>
+<script type="text/javascript">
+	//获得画布
+let canvas = document.querySelector('#canvasDemo');
+let ctx = canvas.getContext('2d'); //获得上下文
+
+canvas.width = 900; //设置标签的属性宽高
+canvas.height = 600; //设置标签的属性宽高
+canvas.style.border = '1px solid #000';
+
+ctx.strokeRect(50,50,250,150);
+ctx.translate(50,50);//将画布原点位移到点（50，50） 
+ctx.strokeRect(50,50,250,150);
+</script>
+</html>

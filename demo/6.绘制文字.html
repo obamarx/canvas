@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvasDemo">
+      若浏览器显示此行文本，则该浏览器不支持canvas。
+   </canvas>
+</body>
+<script type="text/javascript">
+	//获得画布
+let canvas = document.querySelector('#canvasDemo');
+let ctx = canvas.getContext('2d'); //获得上下文
+// 设置字体
+ctx.font = "18px bold 黑体";
+// 设置颜色
+ctx.fillStyle = "#f00";
+// 设置水平对齐方式
+ctx.textAlign = "center";
+// 设置垂直对齐方式
+ctx.textBaseline = "middle";
+// 绘制文字（参数：要写的字，x坐标，y坐标）
+ctx.fillText("要写的文字", 100, 100);//在画布上绘制文本（有填充）
+//ctx.strokeText("要写的文字", 100, 100);//在画布上绘制文本（无填充）
+</script>
+</html>

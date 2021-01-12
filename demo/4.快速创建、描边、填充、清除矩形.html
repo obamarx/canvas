@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvasDemo">
+      若浏览器显示此行文本，则该浏览器不支持canvas。
+   </canvas>
+</body>
+<script type="text/javascript">
+	//获得画布
+let canvas = document.querySelector('#canvasDemo');
+let ctx = canvas.getContext('2d'); //获得上下文
+
+canvas.width = 900; //设置标签的属性宽高
+canvas.height = 600; //设置标签的属性宽高
+canvas.style.border = '1px solid #000';
+
+//绘制矩形
+ctx.rect(50,50,200,100); //快速创建矩形(x, y, width, height)，还没实际绘制
+ctx.strokeRect(50,50,200,100);//描边，所以这边可以不需要ctx.stroke()
+ctx.fillStyle="red";//设置填充的颜色
+ctx.fillRect(50,50,200,100);//进行填充颜色
+//ctx.clearRect(40,40,100,50);//清除一个矩形区域内的东西，可以当成橡皮擦的概念
+</script>
+</html>
