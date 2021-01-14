@@ -49,9 +49,9 @@
 
                 // 默认绘制在中心位置朝外
                 that.ctx.drawImage(image, // 图片
-                    0, 0, // 从图片的坐标位置开始
+                    0, 0, // 从图片的坐标位置开始,开始剪切的坐标; 
                     that.personWidth, that.personHeight, // 截取多大的图片
-                    that.x0, that.y0, // 从画布的起点开始
+                    that.x0, that.y0, // 在画布上放置图像的坐标位置。
                     that.personWidth, that.personHeight); // 画多大
 
                 // 添加方向键控制图片的行走
